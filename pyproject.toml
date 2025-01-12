@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pydsa"
+version = "0.1"
+authors = [
+    {name = "Yanic Heinen"}
+]
+description = "Simple implementation of data structures and algorithms."
+readme = "README.md"
+requires-python = ">=3.12"
+dynamic = ["dependencies"]
+
+[tool.setuptools]
+packages=["pydsa"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirement.txt"]}
